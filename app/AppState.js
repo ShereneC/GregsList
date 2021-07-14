@@ -1,8 +1,13 @@
 import Car from "./Models/Car.js"
+import Home from "./Models/home.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
+
+  /** @type {Home[]} */
+  homes = [new Home('Ranch', 'Green', 1800, 300000), new Home('Colonial', 'Cream', 3200, 550000)]
+
 
   /** @type {Car[]} */
   cars = [
