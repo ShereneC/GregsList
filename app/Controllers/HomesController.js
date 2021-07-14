@@ -13,7 +13,8 @@ function _draw() {
 
 export default class HomesController {
   constructor() {
-
+    ProxyState.on('homes', _draw)
+    ProxyState.on('homes', () => { console.log('new Home') })
     _draw()
   }
 
@@ -28,6 +29,7 @@ export default class HomesController {
     }
     console.log(rawHome)
     homesService.createHome(rawHome)
-    _draw()
+
+    form.reset()
   }
 }
