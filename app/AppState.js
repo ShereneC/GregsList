@@ -1,4 +1,4 @@
-import Car from "./Models/Car.js"
+import Car from "./Models/Car1.js"
 import Home from "./Models/home.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
