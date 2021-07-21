@@ -6,7 +6,7 @@ import { isValidProp } from "./Utils/isValidProp.js"
 class AppState extends EventEmitter {
 
   /** @type {Home[]} */
-  homes = [new Home('Ranch', 'Green', 1800, 300000), new Home('Colonial', 'Cream', 3200, 550000)]
+  homes = []
 
 
   /** @type {Car[]} */

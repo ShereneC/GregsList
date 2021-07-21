@@ -22,27 +22,45 @@
         </nav>
     </header>
     <main class="container">
-        <div class="row">
-            <div class="col mt-5">
+        <div class="row mt-2">
+            <div class="col">
+                <h3>Homes for Sale!!!</h3>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col mt-1">
                 <form class="d-flex" onsubmit="app.homesController.createHome(event)">
                     <div class="form-group">
-                        <label for="style">Style</label>
-                        <input type="text" name="style" id="style" class="form-control" placeholder="Style..." required>
+                        <label for="imgUrl">Image</label>
+                        <input type="text" name="imgUrl" id="imgUrl" class="form-control" placeholder="style..."
+                            required>
                     </div>
                     <div class="form-group">
-                        <label for="color">Color</label>
-                        <input type="text" name="color" id="color" class="form-control" placeholder="Color..." required>
+                        <label for="bedrooms">Beds</label>
+                        <input type="number" name="bedrooms" id="bedrooms" class="form-control" placeholder="..."
+                            required min="1" max="9">
                     </div>
                     <div class="form-group">
-                        <label for="size">Size</label>
-                        <input type="number" name="size" id="size" class="form-control" placeholder="Size..." required
-                            min="1950" max="2021">
+                        <label for="bathrooms">Baths</label>
+                        <input type="number" name="bathrooms" id="bathrooms" class="form-control" placeholder="..."
+                            required min="1" max="9">
                     </div>
                     <div class="form-group">
                         <label for="price">Price</label>
-                        <input type="number" name="price" id="price" class="form-control" placeholder="Price..."
-                            required min="100000">
+                        <input type="number" name="price" id="price" class="form-control" placeholder="..." required
+                            min="100000">
                     </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="number" name="year" id="year" class="form-control" placeholder="..." required
+                            min="1" max="9">
+                    </div>
+                    <div class="form-group">
+                        <label for="size">levels</label>
+                        <input type="number" name="levels" id="levels" class="form-control" placeholder="..." required
+                            min="1" max="9">
+                    </div>
+
                     <div class="d-flex align-items-center">
                         <button type="submit" class="btn btn-outline-success">Add Home</button>
                     </div>
@@ -50,8 +68,13 @@
             </div>
         </div>
         <div class="row" id="homes"></div>
+        <div class="row mt-2">
+            <div class="col">
+                <h3>Cars for Sale!!!</h3>
+            </div>
+        </div>
         <div class="row">
-            <div class="col mt-5">
+            <div class="col mt-3">
                 <form class="d-flex" onsubmit="app.carsController.createCar()">
                     <div class="form-group">
                         <label for="style">Style</label>
@@ -106,6 +129,9 @@
             <p><small>Made with love by Codeworks</small></p>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 

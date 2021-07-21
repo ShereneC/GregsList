@@ -18,18 +18,36 @@ export default class HomesController {
     _draw()
   }
 
-  createHome(e) {
-    e.preventDefault()
-    let form = e.target
-    let rawHome = {
-      style: form.style.value,
-      color: form.color.value,
-      size: form.size.value,
-      price: form.price.value
+  async createHome(e) {
+    try {
+      e.preventDefault()
+      console.log('creating home step 1')
+      let form = e.target
+      let rawHome = {
+        // id: Generateid(),
+        imgUrl: form.imgUrl.value,
+        bedrooms: form.bedrooms.value,
+        bathrooms: form.bathrooms.value,
+        price: form.price.value,
+        year: form.year.value,
+        levels: form.levels.value
+      }
+      console.log(rawHome)
+      await homesService.createHome(rawHome)
+      console.log('your new home sir', res.data)
     }
-    console.log(rawHome)
-    homesService.createHome(rawHome)
+    catch (error) {
+      console.error(error.message)
+    }
+  }
 
-    form.reset()
+  deleteHome(homeId) {
+    console.log('you are trying to delete a home by the id of', homeId)
+    homesService.deleteHome(homeId)
+  }
+
+  bidHome(homeId) {
+    console.log('you are bidding on a home with the home id of', homeId)
+    homesService.bidHome(homeId)
   }
 }
