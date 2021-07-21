@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js"
-import Car from "../Models/Car1.js"
+import Car from "../Models/Car.js"
 
 
 class CarsService {
